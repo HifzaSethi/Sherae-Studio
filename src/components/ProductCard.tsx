@@ -1,11 +1,15 @@
+import type { Product } from "@/types/product";
+
 type ProductCardProps = {
-  name: string;
-  price: number;
+  name: Product["name"];
+  price: Product["price"];
+  category: Product["category"];
 };
 
 export default function ProductCard({
   name,
   price,
+  category,
 }: ProductCardProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 border border-gray-300 p-4">
@@ -13,6 +17,9 @@ export default function ProductCard({
 
       <p className="text-lg text-green-500">
         ₹{price.toLocaleString()}
+      </p>
+       <p className="text-lg text-green-500">
+        {category}
       </p>
     </div>
   );
