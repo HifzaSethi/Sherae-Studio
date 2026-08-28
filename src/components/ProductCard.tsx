@@ -1,26 +1,25 @@
 import type { Product } from "@/types/product";
 
 type ProductCardProps = {
-  name: Product["name"];
-  price: Product["price"];
-  category: Product["category"];
+  product: Product;
 };
 
-export default function ProductCard({
-  name,
-  price,
-  category,
-}: ProductCardProps) {
+export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 border border-gray-300 p-4">
-      <h2 className="text-xl font-bold">{name}</h2>
+    <div className="border border-gray-300 p-4">
+      <h2 className="text-xl font-bold">{product.name}</h2>
 
       <p className="text-lg text-green-500">
-        ₹{price.toLocaleString()}
+        ₹{product.price.toLocaleString()}
       </p>
-       <p className="text-lg text-green-500">
-        {category}
+
+      <p className="text-lg text-green-500">
+        {product.category}
       </p>
+
+      <button className="mt-4 border border-gray-400 px-4 py-2">
+        View Details
+      </button>
     </div>
   );
 }

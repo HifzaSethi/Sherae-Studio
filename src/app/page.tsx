@@ -24,27 +24,27 @@ import ProductCard from "@/components/ProductCard";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-3xl font-bold text-center">
-        SHERAÉ STUDIO
-      </h1>
+    <div className="min-h-screen bg-stone-50 px-6 py-16">
+     <h1 className="text-center text-5xl font-semibold tracking-widest">
+  SHERAÉ STUDIO
+</h1>
 
-      <p className="text-center">
-        Where every piece tells a story.
-      </p>
+<p className="mt-4 text-center text-lg text-stone-600">
+  Where every piece tells a story.
+</p>
 
-      <p className="text-blue-500 hover:underline cursor-pointer">
-        [ Explore Collection ]
-      </p>
+<p className="mt-6 text-center underline cursor-pointer">
+  Explore Collection
+</p>
 
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          name={product.name}
-          price={product.price}
-          category={product.category}
-        />
-      ))}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {products.map((product) => (
+    <ProductCard
+      key={product.id}
+      product={product}
+    />
+  ))}
+</div>
     </div>
   );
 }
