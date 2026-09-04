@@ -1,5 +1,5 @@
 
-import { products } from "@/data/product";
+import { products } from "@/data/products";
 
 import ProductCard from "@/components/ProductCard";
 

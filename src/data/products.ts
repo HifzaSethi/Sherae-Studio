@@ -5,17 +5,20 @@ export const products: Product[] = [
     price: 2500,
     id: 1,
     category: "kids",
+    image: "products/zamurd.jpeg"
   },
   {
     name: "Rimjhim",
     price: 2200,
     id: 2,
     category: "kids",
+    image: "products/rhimjim.jpeg"
   },
   {
     name: "Mahtab",
     price: 3000,
     id: 3,
     category: "kids",
+    image: "products/mahtab.jpeg"
   },
 ];
