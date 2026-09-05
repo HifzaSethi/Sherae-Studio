@@ -1,5 +1,5 @@
 import type { Product } from "@/types/product";
-
+import Link from "next/link";
 type ProductCardProps = {
   product: Product;
 };
@@ -17,9 +17,9 @@ export default function ProductCard({ product }: ProductCardProps) {
         {product.category}
       </p>
 
-      <button className="mt-4 border border-gray-400 px-4 py-2">
-        View Details
-      </button>
+      <Link href={`/products/${product.id}`}>
+  View Details
+</Link>
     </div>
   );
 }
