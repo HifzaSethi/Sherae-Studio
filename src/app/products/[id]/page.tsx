@@ -49,8 +49,7 @@ export default async function ProductPage({
           <div className="my-8 h-px w-full bg-stone-200" />
 
           <p className="text-base leading-7 text-stone-600">
-            Discover the elegance of {product.name}, thoughtfully designed
-            with comfort, quality, and timeless style in mind.
+            {product.description}
           </p>
 
           {/* Product Details */}
