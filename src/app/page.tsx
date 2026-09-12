@@ -1,7 +1,13 @@
 
 import { products } from "@/data/products";
-
+;
 import ProductCard from "@/components/ProductCard";
+function getproductsByCategory(  category: "men" | "women" | "kids") {
+  return products.filter((product) => product.category === category);
+}
+const kidsProducts= getproductsByCategory("kids");
+const womenProducts= getproductsByCategory("women");
+const menProducts= getproductsByCategory("men");
 
 export default function Home() {
   return (
